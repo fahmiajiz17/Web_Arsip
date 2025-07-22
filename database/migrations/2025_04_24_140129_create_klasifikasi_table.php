@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('klasifikasi', function (Blueprint $table) {
-            $table->bigIncrements("id_klasifikasi");
-            $table->string("kode_klasifikasi");
-            $table->string("jenis_dokumen");
-            $table->string("klasifikasi_keamanan");
-            $table->string("hak_akses");
-            $table->string("akses_publik");
-            $table->string("retensi_aktif");
-            $table->string("retensi_inaktif");
-            $table->string("retensi_keterangan");
-            $table->string("unit_pengolah");
+            $table->bigIncrements('id_klasifikasi');
+            $table->string('kode_klasifikasi');
+            $table->string('jenis_dokumen');
+            $table->string('klasifikasi_keamanan');
+            $table->string('hak_akses');
+            $table->string('akses_publik');
+            $table->integer('retensi_aktif');
+            $table->integer('retensi_inaktif');
+            $table->string('retensi_keterangan');
+            $table->string('unit_pengolah');
             $table->timestamps();
         });
     }

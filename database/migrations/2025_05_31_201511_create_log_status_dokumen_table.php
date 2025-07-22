@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('log_status_dokumen', function (Blueprint $table) {
             $table->bigIncrements('id_log_status_dokumen');
-            $table->unsignedBigInteger('nomor_dokumen'); // sama tipe-nya dengan arsip.nomor_dokumen
+            $table->unsignedBigInteger('nomor_dokumen');
             $table->enum('verifikasi_arsip', ['Verifikasi', 'Disetujui', 'Direvisi']);
             $table->text('catatan')->nullable();
             $table->foreignId('diproses_oleh')->constrained('users');

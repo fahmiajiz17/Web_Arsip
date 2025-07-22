@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('arsip', function (Blueprint $table) {
-            $table->unsignedBigInteger('nomor_dokumen')->unique();
+            $table->bigIncrements('nomor_dokumen');
             $table->string('kode_dokumen')->unique();
             $table->string('nama_dokumen');
             $table->date('tanggal_arsip');
@@ -31,16 +31,20 @@ return new class extends Migration
             $table->string('laci');
             $table->string('folder');
             $table->string('kata_kunci');
-            $table->string('verifikasi_arsip');
-            $table->string('batas_retensi_aktif');
-            $table->string('batas_retensi_inaktif');
+            $table->enum('verifikasi_arsip', ['Verifikasi', 'Direvisi', 'Disetujui'])->default('Verifikasi');
+            $table->text('catatan_revisi')->nullable();
+            $table->string('status_dokumen');
+            $table->foreignId('dibuat_oleh')->constrained('users');
+            $table->foreignId('disetujui_oleh')->nullable()->constrained('users');
+            $table->date('batas_status_retensi_aktif');
+            $table->date('batas_status_retensi_inaktif');
             $table->string('vital');
             $table->string('terjaga');
             $table->string('memori_kolektif_bangsa');
-            $table->string('waktu_pembuatan_arsip');
-            $table->string('pembuat_arsip');
             $table->string('arsip_dokumen');
             $table->timestamps();
+            $table->string('surat_berita_path')->nullable();
+            $table->date('tanggal_musnahkan')->nullable()->comment('Tanggal arsip dimusnahkan');
         });
     }
 

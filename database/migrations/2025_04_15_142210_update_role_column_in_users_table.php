@@ -4,18 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateRoleColumnInUsersTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        // Mengubah kolom role menjadi unsignedBigInteger
         Schema::table('users', function (Blueprint $table) {
-            // Jika kolom 'role' sudah ada, kita ubah ke unsignedBigInteger
+            // Mengubah kolom role menjadi unsignedBigInteger
             $table->unsignedBigInteger('role')->change();
-
             // Menambahkan foreign key constraint
             $table->foreign('role')->references('id')->on('role')->onDelete('cascade');
         });
@@ -32,4 +30,4 @@ class UpdateRoleColumnInUsersTable extends Migration
             $table->integer('role')->change();
         });
     }
-}
+};
