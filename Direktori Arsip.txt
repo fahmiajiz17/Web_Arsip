@@ -1,0 +1,233 @@
+📁arsip/
+├── 📁app/
+│   ├── 📁Console/
+│   │   ├── 📁Commands/
+│   │   │   └── 📄UpdateStatusDokumenInaktif.php
+│   │   └── 📄Kernel.php
+│   ├── 📁Exports/
+│   │   ├── 📄ArsipExport.php
+│   │   ├── 📄KadaluarsaExport.php
+│   │   ├── 📄KlasifikasiExport.php
+│   │   ├── 📄KlasifikasiImport.php
+│   │   ├── 📄KlasifikasiTemplateExport.php
+│   │   ├── 📄MusnahExport.php
+│   │   └── 📄PanduanExport.php
+│   ├── 📁Helpers/
+│   │   └── 📄helpers.php
+│   ├── 📁Http/
+│   │   ├── 📁Controllers/
+│   │   │   ├── 📄ArsipController.php
+│   │   │   ├── 📄ArsipExportController.php
+│   │   │   ├── 📄AuthController.php
+│   │   │   ├── 📄Controller.php
+│   │   │   ├── 📄DasarHukumController.php
+│   │   │   ├── 📄DashboardController.php
+│   │   │   ├── 📄JenisController.php
+│   │   │   ├── 📄KadaluarsaController.php
+│   │   │   ├── 📄KlasifikasiController.php
+│   │   │   ├── 📄LaporanController.php
+│   │   │   ├── 📄LogAktivitasController.php
+│   │   │   ├── 📄MusnahController.php
+│   │   │   ├── 📄PanduanPenggunaanController.php
+│   │   │   ├── 📄PasswordController.php
+│   │   │   ├── 📄ProfilController.php
+│   │   │   ├── 📄RoleController.php
+│   │   │   └── 📄UserController.php
+│   │   └── 📁Middleware/
+│   │       └── 📄CheckRole.php
+│   ├── 📁Imports/
+│   │   ├── 📄KlasifikasiImport.php
+│   │   └── 📄testgenerateimport.php
+│   ├── 📁Models/
+│   │   ├── 📄Arsip.php
+│   │   ├── 📄DasarHukum.php
+│   │   ├── 📄Jenis.php
+│   │   ├── 📄Klasifikasi.php
+│   │   ├── 📄LogAktivitas.php
+│   │   ├── 📄LogStatusDokumen.php
+│   │   ├── 📄PanduanPenggunaan.php
+│   │   ├── 📄Profil.php
+│   │   ├── 📄Role.php
+│   │   └── 📄User.php
+│   ├── 📁Providers/
+│   │   └── 📄AppServiceProvider.php
+│   └── 📁View/
+│       └── 📁Components/
+│       │   └── 📄AppLayout.php
+│       └── 📁Composers/
+│           └── 📄ProfilComposer.php
+├── 📁bootstrap/
+│   ├── 📁cache/
+│   ├── 📄app.php
+│   └── 📄providers.php
+├── 📁config/
+│   ├── 📄app.php
+│   ├── 📄auth.php
+│   ├── 📄cache.php
+│   ├── 📄database.php
+│   ├── 📄filesystems.php
+│   ├── 📄logging.php
+│   ├── 📄mail.php
+│   ├── 📄queue.php
+│   ├── 📄recaptcha.php
+│   ├── 📄services.php
+│   └── 📄session.php
+├── 📁database/
+│   ├── 📁factories/
+│   │   └── 📄UserFactory.php
+│   ├── 📁migrations/
+│   │   ├── 📄0001_01_01_000000_create_users_table.php
+│   │   ├── 📄0001_01_01_000001_create_cache_table.php
+│   │   ├── 📄0001_01_01_000002_create_jobs_table.php
+│   │   ├── 📄2024_08_08_094550_create_jenis_table.php
+│   │   ├── 📄2025_03_19_194006_add_baru_to_arsip.php
+│   │   ├── 📄2025_03_19_194601_add_baru_to_jenis.php
+│   │   ├── 📄2025_04_14_162707_create_role_table.php
+│   │   ├── 📄2025_04_15_142210_update_role_column_in_users_table.php
+│   │   ├── 📄2025_04_24_140129_create_klasifikasi_table.php
+│   │   ├── 📄2025_04_29_192621_create_panduan_penggunaan_table.php
+│   │   ├── 📄2025_05_01_091012_create_dasar_hukum_table.php
+│   │   ├── 📄2025_05_07_173852_create_arsip_table.php
+│   │   ├── 📄2025_05_08_141009_update_arsip_table.php
+│   │   ├── 📄2025_05_16_132503_create_log_aktivitas_table.php
+│   │   ├── 📄2025_05_30_051500_add_surat_berita_path_to_arsip_table.php
+│   │   ├── 📄2025_05_31_172052_add_foto_to_users_table.php
+│   │   ├── 📄2025_05_31_201511_create_log_status_dokumen_table.php
+│   │   ├── 📄2025_06_02_065506_create_profil_table.php
+│   │   └── 📄2025_06_04_200849_add_tanggal_musnahkan_to_arsip_table.php
+│   └── 📁seeders/
+│       └── 📄DatabaseSeeder.php
+├── 📁public/
+│   ├── 📁css/
+│   │   ├── 📁template/
+│   │   │   └── 📄kaiadmin.min.css
+│   │   ├── 📄app.css
+│   │   └── 📄page-auth.css
+│   ├── 📁images/
+│   ├── 📁js/
+│   │   ├── 📁template/
+│   │   │   └── 📄kaiadmin.min.js
+│   │   ├── 📄image-preview.js
+│   │   └── 📄plugins.js
+│   ├── 📁storages/
+│   │   ├── 📁dasarhukum/
+│   │   ├── 📁dokumen/
+│   │   ├── 📁foto_user/
+│   │   ├── 📁logo/
+│   │   ├── 📁panduan/
+│   │   └── 📁surat_berita
+│   ├── 📄.htaccess
+│   ├── 📄favicon.ico
+│   ├── 📄index.php
+│   └── 📄robots.txt
+├── 📁resources/
+│   ├── 📁css/
+│   │   └── 📄app.css
+│   ├── 📁js/
+│   │   ├── 📄app.js
+│   │   └── 📄bootstrap.js
+│   └── 📁views/
+│       ├── 📁arsip/
+|       |   ├── 📁dasarhukum/
+|       |   |   ├── 📄create.blade.php
+|       |   |   ├── 📄edit.blade.php
+|       |   |   ├── 📄index.blade.php
+│       │   |   └── 📄show.blade.php
+|       |   ├── 📁klasifikasi/
+|       |   |   ├── 📄create.blade.php
+|       |   |   ├── 📄edit.blade.php
+|       |   |   ├── 📄index.blade.php
+│       │   |   └── 📄show.blade.php
+|       |   ├── 📁panduan/
+|       |   |   ├── 📄create.blade.php
+|       |   |   ├── 📄edit.blade.php
+|       |   |   ├── 📄index.blade.php
+│       │   |   └── 📄show.blade.php
+|       |   ├── 📁pengguna/
+│       │   |   └── 📄index.blade.php
+|       |   ├── 📄create.blade.php
+|       |   ├── 📄edit.blade.php
+|       |   ├── 📄index.blade.php
+│       │   └── 📄show.blade.php
+│       ├── 📁auth/
+│       │   └── 📄login.blade.php
+│       ├── 📁components/
+|       |   ├── 📄alert.blade.php
+|       |   ├── 📄avatar.blade.php
+|       |   ├── 📄card-stats.blade.php
+|       |   ├── 📄form-action-buttons.blade.php
+|       |   ├── 📄form-title.blade.php
+|       |   ├── 📄logo-header.blade.php
+|       |   ├── 📄modal-logout.blade.php
+│       │   └── 📄sidebar-link.blade.php
+│       ├── 📁dashboard/
+│       │   └── 📄index.blade.php
+│       ├── 📁jenis/
+|       |   ├── 📄create.blade.php
+|       |   ├── 📄edit.blade.php
+│       │   └── 📄index.blade.php
+│       ├── 📁kadaluarsa/
+|       |   ├── 📄filter.blade.php
+|       |   ├── 📄index.blade.php
+|       |   ├── 📄print.blade.php
+│       │   └── 📄show.blade.php
+│       ├── 📁laporan/
+|       |   ├── 📄filter.blade.php
+│       │   └── 📄print.blade.php
+│       ├── 📁layouts/
+|       |   ├── 📄app.blade.php
+|       |   ├── 📄navbar-header.blade.php
+│       │   └── 📄sidebar.blade.php
+│       ├── 📁log-aktivitas/
+│       │   └── 📄index.blade.php
+│       ├── 📁musnah/
+|       |   ├── 📄index.blade.php
+│       │   └── 📄show.blade.php
+│       ├── 📁password/
+│       │   └── 📄edit.blade.php
+│       ├── 📁profil/
+|       |   ├── 📄edit.blade.php
+│       │   └── 📄index.blade.php
+│       ├── 📁tentang/
+│       │   └── 📄index.blade.php
+│       ├── 📁user/
+|       |   ├── 📄create-role.blade.php
+|       |   ├── 📄create.blade.php
+|       |   ├── 📄edit-role.blade.php
+|       |   ├── 📄edit.blade.php
+|       |   ├── 📄index.blade.php
+│       │   └── 📄role.blade.php
+│       └── 📁vendor/
+│           └── 📁pagination/
+|               └── 📄bootstrap-5.blade.php
+├── 📁routes/
+│   ├── 📄console.php
+│   └── 📄web.php
+├── 📁storage/
+│   ├── 📁app/
+│   │   └── 📁public/
+│   ├── 📁framework/
+│   │   ├── 📁cache/
+│   │   │   └── 📁data/
+│   │   ├── 📁sessions/
+│   │   ├── 📁testing/
+│   │   └── 📁views/
+│   └── 📁logs/
+├── 📁tests/
+│   ├── 📁Feature/
+│   │   └── 📄ExampleTest.php
+│   ├── 📁Unit/
+│   │   └── 📄ExampleTest.php
+│   └── 📄TestCase.php
+├── 📁vendor/ (direktori package composer)
+├── 📄.env (file konfigurasi environment)
+├── 📄.env.example
+├── 📄.gitattributes
+├── 📄.gitignore
+├── 📄artisan (CLI tool Laravel)
+├── 📄composer.json
+├── 📄composer.lock
+├── 📄package.json
+├── 📄phpunit.xml
+├── 📄README.md
+└── 📄vite.config.js
